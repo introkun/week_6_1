@@ -134,8 +134,33 @@ int main()
 	}
 		break;
 	case 'e':
-		cout << total;
-		break;
+	{
+		space1 = width;
+		while (cycle <= width)
+		{
+			while (total <= width)
+			{
+				if (total >= space &&
+					total <= space1 ||
+					total <= space &&
+					total >= space1)
+				{
+					cout << '*';
+				}
+				else
+				{
+					cout << ' ';
+				}
+				total++;
+			}
+			cout << endl;
+			total = 1;
+			space++;
+			space1--;
+
+			cycle++;
+		}
+	}break;
 	case 'f':
 		cout << total;
 		break;
