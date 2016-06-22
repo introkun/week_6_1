@@ -7,7 +7,7 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 
-	int width, cycle = 1, total = 1, space = 1;
+	int width, cycle = 1, total = 1, space = 1, space1;
 	char figure;
 
 	cout << "выбери фигуру \n"
@@ -32,6 +32,7 @@ int main()
 	switch (figure)
 	{
 	case 'a':
+	{
 		while (cycle <= width)
 		{
 			while (total <= width)
@@ -52,9 +53,10 @@ int main()
 
 			cycle++;
 		}
+	}
 		break;
 	case 'b':
-
+	{
 		while (cycle <= width)
 		{
 			while (total <= width)
@@ -75,15 +77,32 @@ int main()
 
 			cycle++;
 		}
+	}
 		break;
 	case 'c':
 	{
+		space1 = width;
 		while (cycle <= width)
 		{
 			while (total <= width)
 			{
-				
+				if (total >= space &&
+					total <= space1)
+				{
+					cout << '*';
+				}
+				else
+				{
+					cout << ' ';
+				}
+				total++;
 			}
+			cout << endl;
+			total = 1;
+			space++;
+			space1--;
+
+			cycle++;
 		}
 	}
 		break;
