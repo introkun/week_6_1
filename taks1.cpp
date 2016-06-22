@@ -54,23 +54,26 @@ int main()
 		}
 		break;
 	case 'b':
-		total = width;
-		space = width;
+
 		while (cycle <= width)
 		{
 			while (total <= width)
 			{
-				cout << '*';
+				if (total <= space)
+				{
+					cout << '*';
+				}
+				else
+				{
+					cout << ' ';
+				}
 				total++;
 			}
-			while (total >= space)
-			{
-				cout << " ";
-				total--;
-			}
 			cout << endl;
+			total = 1;
+			space++;
+
 			cycle++;
-			space--;
 		}
 		break;
 	case 'c':
