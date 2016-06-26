@@ -46,6 +46,7 @@ int main()
 	{
 	case 'a':
 	{
+		// Попробуйте организовать программу с 2-мя вложенными while и одним switch внутри
 		while (cycle <= width)
 		{
 			while (total <= width)
